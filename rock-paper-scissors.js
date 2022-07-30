@@ -1,0 +1,5 @@
+let getComputerChoice = () => {
+    
+}
+
+getComputerChoice()
