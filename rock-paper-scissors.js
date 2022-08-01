@@ -1,32 +1,91 @@
 
 let choice = ['rock', 'paper', 'scissors'];
 
-getComputerSelection = (array) => {
+let playerWins = 0;
+let computerWins = 0;
 
-    return array[Math.floor(Math.random()*array.length)];
+let playerSelection;
+let computerSelection;
+
+//  console.log(game()) in browser to run game & show winner in the end
+// game();
+
+function getPlayerSelection() {
+    while (!choice.includes(playerSelection)) {
+        playerSelection = prompt("Enter your Choice: ", "rock").toLowerCase();
+
+    }
+    return playerSelection;
 }
-let computerSelection = getComputerSelection(choice);
-let playerSelection = prompt("Enter your Choice: ", "rock").toLowerCase();
 
-while(!choice.includes(playerSelection)) { 
-
-    playerSelection = prompt("Enter your Choice: ", "rock").toLowerCase();
+function capitalizeSelection(Selection) {
+    
+    let capitalized = '';
+    for(let i = 0; i < Selection.length; i++) {
+        (i == 0) ? capitalized = Selection[i].toUpperCase() : capitalized += Selection[i];
+    }
+    return capitalized;
 }
 
-function playRound(getComputerSelection, playerSelection) {
-    console.log(getComputerSelection);
-    console.log(playerSelection);
+function getComputerSelection(array) {
+
+    return array[Math.floor(Math.random() * array.length)];
 }
 
-playRound(getComputerSelection(choice), playerSelection);
+function game() {
 
+    for(let l = 1; l <= 5; l++) {
+        
+        playerSelection = getPlayerSelection();
+        playerSelection = capitalizeSelection(playerSelection);
+        computerSelection = getComputerSelection(choice);
+        computerSelection = capitalizeSelection(computerSelection);
+        
+        playRound(computerSelection, playerSelection);
+    }
 
-//  get computer choice
-//  get player choice
-//  if input is wrong show again
-//  play round
-    //  compare inputs of user and computer
-    //  if match, round equal
-    //  else, announce winner according to rps rules
-//  play 5 rounds total
-//  test each done part
+    if (playerWins > computerWins) {
+        return `You Won by ${playerWins} to ${computerWins}`;
+    }  else if (playerWins < computerWins) {
+        return `Computer Won by ${computerWins} to ${playerWins}`;
+    } else return `Match Draw by ${computerWins} to ${playerWins}`;
+}
+
+function playRound(computerSelection, playerSelection) {
+
+    // below lines to use for debugging & or play rounds:
+    console.log(".................................................");
+    console.log("computerSelection: " + computerSelection);
+    console.log("playerSelection: " + playerSelection);
+    // debugger;
+
+    if (computerSelection == playerSelection) {
+        console.log(`Match Draw! ${computerSelection} can't beat ${playerSelection}`);
+        return;
+    } else if (computerSelection == 'Rock' && playerSelection == 'Paper') {
+        console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+        playerWins += 1;
+        return;
+    } else if (computerSelection == 'Rock' && playerSelection == 'Scissors') {
+        console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+        computerWins += 1;
+        return;
+    } else if (computerSelection == 'Paper' && playerSelection == 'Rock') {
+        console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+        computerWins += 1;
+        return;
+    } else if (computerSelection == 'Paper' && playerSelection == 'Scissors') {
+        console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+        playerWins += 1;
+        return;
+    } else if (computerSelection == 'Scissors' && playerSelection == 'Rock') {
+        console.log(`You Win! ${playerSelection} beat ${computerSelection}`);
+        playerWins += 1;
+        return;
+    } else if (computerSelection == 'Scissors' && playerSelection == 'Paper') {
+        console.log(`You Lose! ${computerSelection} beat ${playerSelection}`);
+        computerWins += 1;
+        return;
+    }
+
+}
