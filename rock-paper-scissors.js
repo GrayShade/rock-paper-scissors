@@ -19,9 +19,9 @@ function getPlayerSelection() {
 }
 
 function capitalizeSelection(Selection) {
-    
+
     let capitalized = '';
-    for(let i = 0; i < Selection.length; i++) {
+    for (let i = 0; i < Selection.length; i++) {
         (i == 0) ? capitalized = Selection[i].toUpperCase() : capitalized += Selection[i];
     }
     return capitalized;
@@ -32,24 +32,6 @@ function getComputerSelection(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
-function game() {
-
-    for(let l = 1; l <= 5; l++) {
-        
-        playerSelection = getPlayerSelection();
-        playerSelection = capitalizeSelection(playerSelection);
-        computerSelection = getComputerSelection(choice);
-        computerSelection = capitalizeSelection(computerSelection);
-        
-        playRound(computerSelection, playerSelection);
-    }
-
-    if (playerWins > computerWins) {
-        return `You Won by ${playerWins} to ${computerWins}`;
-    }  else if (playerWins < computerWins) {
-        return `Computer Won by ${computerWins} to ${playerWins}`;
-    } else return `Match Draw by ${computerWins} to ${playerWins}`;
-}
 
 function playRound(computerSelection, playerSelection) {
 
@@ -88,4 +70,23 @@ function playRound(computerSelection, playerSelection) {
         return;
     }
 
+}
+
+function game() {
+
+    for (let l = 1; l <= 5; l++) {
+
+        playerSelection = getPlayerSelection();
+        playerSelection = capitalizeSelection(playerSelection);
+        computerSelection = getComputerSelection(choice);
+        computerSelection = capitalizeSelection(computerSelection);
+
+        playRound(computerSelection, playerSelection);
+    }
+
+    if (playerWins > computerWins) {
+        return `You Won by ${playerWins} to ${computerWins}`;
+    } else if (playerWins < computerWins) {
+        return `Computer Won by ${computerWins} to ${playerWins}`;
+    } else return `Match Draw by ${computerWins} to ${playerWins}`;
 }
