@@ -1,11 +1,11 @@
 
 let choice = ['rock', 'paper', 'scissors'];
 
-let playerWins = 0;
-let computerWins = 0;
-
 let playerSelection;
 let computerSelection;
+
+let playerWins = 0;
+let computerWins = 0;
 
 //  console.log(game()) in browser to run game & show winner in the end
 // game();

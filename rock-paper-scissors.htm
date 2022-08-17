@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="rock-paper-scissors.js"></script>
+    <script src=".\rock-paper-scissors.js"></script>
+    <link rel="stylesheet" href=".\rock-paper-scissors.css">
 </head>
+
 <body>
-    
+    <div class="container">
+
+        <div class="result">
+            <h1>Rock-Paper-Scissors</h1>
+            <!-- dunamically implement it: -->
+            <div id="choice">Pick either rock, paper or scissors to play</div>
+            <!-- <div id="winner"><p>Winner is:(dynamic create)</p>
+            <br>
+            <h1>COMPUTER</h1>
+            </div> -->
+
+            <div class="score">
+                <div id="playerScore">
+                    <p>Player Score: </p>
+                    <h1>3</h1>
+                </div>
+                <div>
+                    <p>Computer Score: </p>
+                    <h1>3</h1>
+                </div>
+
+            </div>
+            <div class="circles">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="buttons">
+                <button id="btn1">rock</button>
+                <button id="btn2">paper</button>
+                <button id="btn3">scissors</button>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
