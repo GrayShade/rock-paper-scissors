@@ -6,9 +6,10 @@ body {
     flex-direction: column;
     font-family: system-ui;
     justify-content: center;
+    font-style: oblique;
 }
 
-.container {
+#container {
     display: flex;
     flex-direction: column;
     /* width: 50%; */
@@ -17,20 +18,53 @@ body {
     
 }
 
-.result {
+#header {
     display: flex;
     flex-direction: column;
-    background: white;
-    border-radius: 10px;
+    background: #55B4B0;
+    background-color: white;
+    border-radius: 10px 10px 0px 0px;
     box-shadow: rgba(0, 0, 0, 0.2) 2px 4px 16px;
-    padding: 20px 20px;
-    height: 500px;
+    padding: 0px 20px;
+    /* height: 500px; */
     width: 25%;
     justify-content: space-around;
     text-align: center;
+    
+
+}
+#gameBody {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 4px 16px;
+    padding: 0px 20px 0px;
+    height: 500px;
+    width: 25%;
+    justify-content: space-between;
+    text-align: center;
 }
 
-.score {
+#rules {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#rules p {
+    margin-bottom: 0px;
+}
+
+#pWinner {
+    /* margin-top: 5%; */
+}
+
+#h1Winner {
+    margin-top: 0px;
+}
+
+#score {
     display: flex;
     padding: 0%;
     flex-direction: row;
@@ -38,7 +72,9 @@ body {
     align-items: center;
 }
 
-.circles {
+
+
+#circles {
     display: flex;
     justify-content: center;
     height: 10%;
@@ -55,10 +91,23 @@ body {
     margin: 0px 2px;
 }
 
+#choiceSelected {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#p1ChoiceSelected, #p2ChoiceSelected {
+    margin-bottom: 0px;
+}
+
+#divChoiceResult {
+    margin: 0px 0px 10px;
+}
+
 .buttons {
     display: flex;
     justify-content: space-evenly;
-    margin: 0% 15%;
+    margin: 5% 15% 10%;
 }
 
 button {
@@ -67,6 +116,7 @@ button {
     border-radius: 8px;
     background: #eee;
     padding: 10px 8%;
+    font-style: oblique;
     /* margin: 5% -10%; */
     /* width: 9%; */
 }

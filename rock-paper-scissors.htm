@@ -11,40 +11,64 @@
 </head>
 
 <body>
-    <div class="container">
-
-        <div class="result">
+    <div id="container">
+        <div id="header">
             <h1>Rock-Paper-Scissors</h1>
-            <!-- dynamically implement it: -->
-            <div id="choice">Pick either rock, paper or scissors to play</div>
-            <!-- <div id="winner"><p>Winner is:(dynamic create)</p>
-            <br>
-            <h1>COMPUTER</h1>
+        </div>
+
+        <div id="gameBody">
+
+
+            <!-- <div id="winner">
+                <p>Winner is:</p>
+                <br>
+                <h1>COMPUTER</h1>
             </div> -->
 
-            <div class="score">
+            <!-- <div id="score">
                 <div id="playerScore">
                     <p>Player Score: </p>
                     <h1>3</h1>
                 </div>
-                <div>
+                <div id="computerScore">
                     <p>Computer Score: </p>
                     <h1>3</h1>
                 </div>
 
+            </div> -->
+
+            
+            <div id="rules"> 
+                <p>Rules:</p>
+                <ul>
+                    <li>Rock beats Scissors</li>
+                    <li>Paper beats Rock</li>
+                    <li>Scissors beats Paper</li>
+                </ul>
             </div>
-            <div class="circles">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
+
+            <div id="circles">
+                <div class="circle" id="circle1"></div>
+                <div class="circle" id="circle2"></div>
+                <div class="circle" id="circle3"></div>
+                <div class="circle" id="circle4"></div>
+                <div class="circle" id="circle5"></div>
             </div>
             <!-- <div id="startGame">
                 
             </div> -->
-             <div class="buttons">
-                    <button id="start-btn" >Play Game!</button>
+
+            <!-- <div>Draw! Scissors can't beat Scissors</div> -->
+
+            <!-- <div id="choiceSelected">
+                <p>Computer: Scissors</p>
+                <p>Player: Scissors</p>
+            </div> -->
+
+            <div id="choiceMessage">Click on Start Game & Pick either rock, paper or scissors to play</div>
+            <!-- <div id="choiceResult">Draw! Scissors can't beat Scissors</div> -->
+            <div class="buttons">
+                <button id="start-btn">Play Game!</button>
                 <!-- <button id="btn1">rock</button>
                 <button id="btn2">paper</button>
                 <button id="btn3">scissors</button> -->
@@ -54,4 +78,5 @@
 
 </body>
 <!-- <script src=".\rock-paper-scissors.js" defer></script> -->
+
 </html>
