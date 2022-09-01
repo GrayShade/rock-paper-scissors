@@ -1,6 +1,5 @@
 body {
     display: flex;
-    /* display: flex; */
     height: 100vh;
     margin: 0;
     flex-direction: column;
@@ -12,7 +11,6 @@ body {
 #container {
     display: flex;
     flex-direction: column;
-    /* width: 50%; */
     margin: 30px;
     align-items: center;
     
@@ -26,13 +24,15 @@ body {
     border-radius: 10px 10px 0px 0px;
     box-shadow: rgba(0, 0, 0, 0.2) 2px 4px 16px;
     padding: 0px 20px;
-    /* height: 500px; */
     width: 25%;
     justify-content: space-around;
     text-align: center;
-    
-
 }
+
+#header h1 {
+    color: #001f3f;
+}
+
 #gameBody {
     display: flex;
     flex-direction: column;
@@ -50,14 +50,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    color: #FF851B;
 }
 
 #rules p {
     margin-bottom: 0px;
-}
-
-#pWinner {
-    /* margin-top: 5%; */
 }
 
 #h1Winner {
@@ -72,7 +69,13 @@ body {
     align-items: center;
 }
 
+#h1PlayerScore {
+    color: #3D9970;
+}
 
+#h1ComputerScore {
+    color: #0074D9
+}
 
 #circles {
     display: flex;
@@ -81,6 +84,7 @@ body {
     align-items: center;
 }
 
+
 .circle {
     display: flex;
     justify-content: center;
@@ -88,7 +92,13 @@ body {
     height: 20px;
     width: 20px;
     border: 2px solid black;
-    margin: 0px 2px;
+    margin: 0px 0.5px;
+}
+
+.circle:nth-child(5) {
+    margin: 0px 5%;
+    height: 30px;
+    width: 30px;
 }
 
 #choiceSelected {
@@ -99,6 +109,12 @@ body {
 #p1ChoiceSelected, #p2ChoiceSelected {
     margin-bottom: 0px;
 }
+#p1ChoiceSelected h3 {
+    color: #0074D9
+}
+#p2ChoiceSelected h3 {
+    color: #3D9970;
+}
 
 #divChoiceResult {
     margin: 0px 0px 10px;
@@ -106,7 +122,7 @@ body {
 
 .buttons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 5% 15% 10%;
 }
 
@@ -115,9 +131,12 @@ button {
     border: none;
     border-radius: 8px;
     background: #eee;
+    /* background: #0074D9;
+    color: #FFFFFF; */
     padding: 10px 8%;
     font-style: oblique;
-    /* margin: 5% -10%; */
-    /* width: 9%; */
+    margin-left: 0.6%;
+    margin-right: 0.6%;
+
 }
 
