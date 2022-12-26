@@ -49,7 +49,7 @@ body {
 #rules {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    text-align: start;
     color: #FF851B;
 }
 
